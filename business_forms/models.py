@@ -42,9 +42,6 @@ class NewProduct(models.Model):
     SOURCE_CHOICES = [
         ('telegram', 'Телеграм'),
         ('instagram', 'Инстаграм (запрещен в РФ)'),
-        ('bot_mailing', 'Рассылка в боте'),
-        ('email_mailing', 'Рассылка по почте'),
-        ('vk', "ВКонтакте")
     ]
     source = models.CharField(
         max_length=20,
@@ -57,9 +54,7 @@ class NewProduct(models.Model):
         ('30-39', '30-39'),
         ('40-49', '40-49'),
         ('50-59', '50-59'),
-        ('60-69', '60-69'),
-        ('70-79', '70-79'),
-        ('80-89', '80-89'),
+        ('60+', 'старше 60'),
     ]
     age = models.CharField(
         max_length=5,
@@ -83,7 +78,7 @@ class NewProduct(models.Model):
     )
 
     health_issues = models.TextField(
-        verbose_name='ТОП-3 вопроса по здоровью, которые вы бы хотели решить/улучшить?'
+        verbose_name='Топ 3 вопроса по эндометриозу, которые интересуют вас больше всего'
     )
 
     subscribed_doctors = models.TextField(
