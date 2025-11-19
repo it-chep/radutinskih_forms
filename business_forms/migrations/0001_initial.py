@@ -30,7 +30,7 @@ class Migration(migrations.Migration):
                 ('full_name', models.CharField(blank=True, max_length=200, verbose_name='Ваше Имя и Фамилия')),
                 ('city', models.CharField(blank=True, max_length=100, verbose_name='Город проживания')),
                 ('phone', models.CharField(blank=True, max_length=20, verbose_name='Ваш номер телефона?')),
-                ('telegram', models.CharField(blank=True, max_length=100, verbose_name='Ссылка на ваш личный телеграм (не канал) в формате https://t.me/doc_radutinskih_forms или через @')),
+                ('telegram', models.CharField(blank=True, max_length=100, verbose_name='Ссылка на ваш личный телеграм (не канал) в формате https://t.me/dr_radutinskih или через @')),
                 ('policy_agreement', models.BooleanField(default=False, verbose_name='Даю согласие на обработку персональных данных')),
                 ('created_at', models.DateTimeField(auto_now_add=True)),
                 ('updated_at', models.DateTimeField(auto_now=True)),

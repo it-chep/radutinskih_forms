@@ -82,7 +82,7 @@ class NewProduct(models.Model):
     )
 
     subscribed_doctors = models.TextField(
-        verbose_name='На кого из докторов вы подписаны в телеграм? (можно просто написать название канала или вставить ссылки)'
+        verbose_name='На кого из докторов вы подписаны в соцсетях? (можно просто написать название канала или вставить ссылки)'
     )
 
     INCOME_CHOICES = [
@@ -135,7 +135,7 @@ class NewProduct(models.Model):
     telegram = models.CharField(
         max_length=100,
         blank=True,
-        verbose_name='Ссылка на ваш личный телеграм (не канал) в формате https://t.me/doc_radutinskih_forms или через @'
+        verbose_name='Ссылка на ваш личный телеграм (не канал) в формате https://t.me/dr_radutinskih или через @'
     )
 
     policy_agreement = models.BooleanField(
